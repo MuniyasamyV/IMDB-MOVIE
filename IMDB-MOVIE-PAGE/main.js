@@ -2,13 +2,14 @@ var API_KEY = "3a37651c";
 var searchBoxElement = document.getElementById("searchBox")
 var movieNameElement = document.getElementById("movie_name")
 var movieImgElement = document.getElementById("movie_image")
+var movieImdbElement = document.getElementById("imdb_rate")
 
 var getMovieUrlByID = function(movieID){
     return `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`
 };
 
 var getMovieUrlByName = function(movieName){
-    return `http://www.omdbapi.com/?i=${movieName}&apikey=${API_KEY}`
+    return `http://www.omdbapi.com/?t=${movieName}&apikey=${API_KEY}`
 };
 async function fetchMovie(type, data) {
     try {
@@ -31,7 +32,8 @@ function main() {
         {
             console.log("got movie data", movieData)
             movieNameElement.innerText = movieData.Title;
-            movieImgElement.setAttribute('src',movieData.Poster)
+            movieImgElement.setAttribute('src',movieData.Poster);
+            movieImdbElement.innerText =movieData.imdbRating
         });
 
     });
