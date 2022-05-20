@@ -27,7 +27,7 @@ async function fetchMovie(type, data) {
     }
 }
 
-function main() {
+function mySearch() {
     console.log("main module loaded");
     searchBoxElement.addEventListener("change", function(event) {
         var searchValue = event.target.value;
@@ -46,5 +46,5 @@ function main() {
     });
 }
 
-main()
+mySearch()
 
