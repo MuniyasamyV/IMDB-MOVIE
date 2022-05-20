@@ -3,6 +3,10 @@ var searchBoxElement = document.getElementById("searchBox")
 var movieNameElement = document.getElementById("movie_name")
 var movieImgElement = document.getElementById("movie_image")
 var movieImdbElement = document.getElementById("imdb_rate")
+var movieTimeElement = document.getElementById("Time_movie")
+var movieReleasedElement = document.getElementById("Release")
+var movieAboutElement =  document.getElementById("Description")
+ 
 
 var getMovieUrlByID = function(movieID){
     return `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`
@@ -33,7 +37,10 @@ function main() {
             console.log("got movie data", movieData)
             movieNameElement.innerText = movieData.Title;
             movieImgElement.setAttribute('src',movieData.Poster);
-            movieImdbElement.innerText =movieData.imdbRating
+            movieImdbElement.innerText =movieData.imdbRating;
+            movieTimeElement.innerText =movieData.Runtime;
+            movieReleasedElement .innerText=movieData.Year;
+            movieAboutElement .innerText=movieData.Plot;
         });
 
     });
