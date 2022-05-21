@@ -1,0 +1,24 @@
+{
+  "name": "imdb-movie",
+  "version": "1.0.0",
+  "description": "\"A app to display movies\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuniyasamyV/IMDB-MOVIE.git"
+  },
+  "author": "Munnisamy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuniyasamyV/IMDB-MOVIE/issues"
+  },
+  "homepage": "https://github.com/MuniyasamyV/IMDB-MOVIE#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.16"
+  }
+}
