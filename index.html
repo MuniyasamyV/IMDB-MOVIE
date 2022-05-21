@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/reload/reload.js"></script>
 </head>
 
 <body class="bg-slate-800">
@@ -42,7 +43,7 @@
           <input class="box-content px-auto lg:h-6 w-80 md:h-6 w-40 text-center border-4  " type="text" id="searchBox">
           </input>
           <div class="box-content px-5 h-6 w-10 text-center border-4  ">
-            <button onclick=search()>
+            <button onclick = "mySearch()">
               <p class="font-mono font-semibold text-amber-800">Search</p>
             </button>
           </div>
@@ -62,15 +63,20 @@
         </div>
         <p id="Description" class="SFMono-Regular font-semibold px-3 py-5 text-stone-700">Story of Movie</p>
       </div>
-
-
-      <div class="max-w-3xl my-auto ">
-        <img id="movie_image" class=" rounded-l-full"
+      <div class="max-w-3xl my-auto">
+        <div class="rounded-l-full">
+          <!-- <img id="movie_image" class="rounded-l-full"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsZWtTKGfGHaWKbKzBaw0B_GP60w2hCpbIeA&usqp=CAU"
-          alt="image" />
+          alt="image" /> -->
+          <div class="w-full">
+             <img id="movie_image" class="rounded-l-full hover:rounded-none"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsZWtTKGfGHaWKbKzBaw0B_GP60w2hCpbIeA&usqp=CAU"
+                alt="image" />
+          </div>
+        </div>
       </div>
     </div>
-    <div class="max-w-6xl  shadow-amber-900 shadow-xl bg-white min-h-fit border-4 mx-auto my-10   ">
+    <div class="max-w-6xl  shadow-amber-900 shadow-xl bg-white min-h-fit border-4 mx-auto my-10 ">
       <div>
         <h2
           class="font-mono px-3 pt-5 pb-10 font-semibold lg:text-4xl md:text-3xl md:text-3xl sm:text-2xl font-semibold">
