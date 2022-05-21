@@ -3,9 +3,11 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// sendFile will go here
+//make main.js public
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(req, res) {
-    res.sendFile("imdb.html", { root: __dirname })
+    res.sendFile("index.html", { root: __dirname })
   });
   
 
